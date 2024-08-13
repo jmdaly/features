@@ -19,7 +19,7 @@ install_fish_debian() {
   echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
   . /etc/os-release
 
-  echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_${VERSION_ID}/ /' \
+  echo "deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_${VERSION_ID}/ /" \
     | tee /etc/apt/sources.list.d/shells:fish:release:3.list
   curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_${VERSION_ID}/Release.key \
     | gpg --dearmor | tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
