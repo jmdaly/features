@@ -1,0 +1,10 @@
+{
+    "name": "sccache",
+    "id": "sccache",
+    "version": "1.0.0",
+    "description": "sccache is a compiler cache. It caches build artifacts for C, C++, and Rust, allowing for faster builds in subsequent runs.",
+    "options": {},
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/rust": {}
+    }
+}

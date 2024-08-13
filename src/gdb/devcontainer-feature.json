@@ -1,0 +1,10 @@
+{
+    "name": "Gnu Debugger",
+    "id": "gdb",
+    "version": "1.0.0",
+    "description": "The GNU Project Debugger (GDB) is a powerful debugger for C, C++, and other languages. It allows you to inspect what the program is doing at a specific moment, and can be used to find bugs in your code.",
+    "options": {},
+    "installsAfter": [
+        "ghcr.io/devcontainers-contrib/features/apt-get-packages"
+    ]
+}
