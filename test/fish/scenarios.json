@@ -1,0 +1,10 @@
+{
+    "stable": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "fish": {
+                "version": "stable"
+            }
+        }
+    }
+}
