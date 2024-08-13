@@ -17,6 +17,9 @@ install_fish_ubuntu() {
 
 install_fish_debian() {
   echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
+  apt-get update && apt-get install -y curl gnupg2 lsb-release
+
   . /etc/os-release
 
   echo "deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_${VERSION_ID}/ /" \
