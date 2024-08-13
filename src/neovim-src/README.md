@@ -1,15 +1,13 @@
 
-# My Favorite Color (color)
+# Neovim (neovim-src)
 
-A feature to remind you of your favorite color
+Neovim is a fork of Vim focused on modern code and features, rather than running in legacy environments.
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/devcontainers/feature-starter/color:1": {
-        "version": "latest"
-    }
+    "ghcr.io/jmdaly/features/neovim-src:1": {}
 }
 ```
 
@@ -17,10 +15,10 @@ A feature to remind you of your favorite color
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| favorite | Choose your favorite color. | string | red |
+| version | The version of Neovim to be installed (stable or nightly) | string | stable |
 
 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers/feature-starter/blob/main/src/color/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/jmdaly/features/blob/main/src/neovim-src/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
