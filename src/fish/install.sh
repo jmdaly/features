@@ -15,10 +15,24 @@ install_fish_ubuntu() {
   apt-get clean && rm -rf /var/lib/apt/lists/*
 }
 
+install_fish_debian() {
+  echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+  . /etc/os-release
+
+  echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_${VERSION_ID}/ /' \
+    | tee /etc/apt/sources.list.d/shells:fish:release:3.list
+  curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_${VERSION_ID}/Release.key \
+    | gpg --dearmor | tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
+  apt-get update
+  apt-get install -y fish
+
 # Detemine the distro we're on by using /etc/os-release
 if [ -f /etc/os-release ]; then
   . /etc/os-release
   case $ID in
+    debian)
+      install_fish_debian
+      ;;
     ubuntu)
       install_fish_ubuntu
       ;;
