@@ -25,6 +25,7 @@ install_fish_debian() {
     | gpg --dearmor | tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
   apt-get update
   apt-get install -y fish
+}
 
 # Detemine the distro we're on by using /etc/os-release
 if [ -f /etc/os-release ]; then
