@@ -1,0 +1,68 @@
+{
+    "name": "Rust CLI Tools",
+    "id": "rust-cli-tools",
+    "version": "1.0.0",
+    "description": "A collection of useful command line tools written in Rust.",
+    "options": {
+        "installRipgrep": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install ripgrep"
+        },
+        "ripgrepVersion": {
+            "type": "string",
+            "default": "14.1.0",
+            "description": "The version of ripgrep to be installed"
+        },
+        "installFd": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install fd"
+        },
+        "fdVersion": {
+            "type": "string",
+            "default": "10.1.0",
+            "description": "The version of fd to be installed"
+        },
+        "installBat": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install bat"
+        },
+        "batVersion": {
+            "type": "string",
+            "default": "0.24.0",
+            "description": "The version of bat to be installed"
+        },
+        "installLsd": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install lsd"
+        },
+        "lsdVersion": {
+            "type": "string",
+            "default": "0.20.1",
+            "description": "The version of lsd to be installed"
+        },
+        "installSad": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install sad"
+        },
+        "sadVersion": {
+            "type": "string",
+            "default": "0.4.31",
+            "description": "The version of sad to be installed"
+        },
+        "installDelta": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install delta"
+        },
+        "deltaVersion": {
+            "type": "string",
+            "default": "0.18.0",
+            "description": "The version of delta to be installed"
+        },
+    },
+}
