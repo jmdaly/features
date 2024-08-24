@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This test file will be executed against an auto-generated devcontainer.json that
-# includes the 'neovim-src' Feature with no options.
+# includes the 'rust-cli-tools' Feature with no options.
 #
 # For more information, see: https://github.com/devcontainers/cli/blob/main/docs/features/test.md
 #
@@ -9,14 +9,14 @@
 # {
 #    "image": "<..some-base-image...>",
 #    "features": {
-#      "neovim-src": {}
+#      "rust-cli-tools": {}
 #    },
 #    "remoteUser": "root"
 # }
 #
 # Thus, the value of all options will fall back to the default value in the
 # Feature's 'devcontainer-feature.json'.
-# For the 'neovim-src' feature, that means the default feature is 'stable'.
+# For the 'rust-cli-tools' feature, that means the default feature is 'stable'.
 #
 # These scripts are run as 'root' by default. Although that can be changed
 # with the '--remote-user' flag.
@@ -24,7 +24,7 @@
 # This test can be run with the following command:
 #
 #    devcontainer features test    \ 
-#               --features neovim-src   \
+#               --features rust-cli-tools   \
 #               --remote-user root \
 #               --skip-scenarios   \
 #               --base-image mcr.microsoft.com/devcontainers/base:ubuntu \
@@ -40,7 +40,7 @@ source dev-container-features-test-lib
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
-check "report neovim version" nvim --version
+check "report ripgrep version" rg --version
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

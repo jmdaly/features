@@ -1,17 +1,14 @@
 {
-    "stable": {
+    "install_all_features": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "neovim-src": {
-                "version": "stable"
-            }
-        }
-    },
-    "nightly": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "features": {
-            "neovim-src": {
-                "version": "nightly"
+            "rust-cli-tools": {
+                "installRipgrep": true,
+                "installFd": true,
+                "installBat": true,
+                "installLsd": true,
+                "installSad": true,
+                "installDelta": true
             }
         }
     }
