@@ -25,6 +25,29 @@ DELTA_VERSION=${DELTAVERSION}
 
 arch=$(uname -m)
 
+# Determine the Linux distro using /etc/os-release, and then install `curl` using the appropriate system package manager.
+if [ -f /etc/os-release ]; then
+  . /etc/os-release
+  case $ID in
+    debian|ubuntu)
+      apt-get update && apt-get install -y curl
+      ;;
+    centos|rhel)
+      yum install -y curl
+      ;;
+    fedora)
+      dnf install -y curl
+      ;;
+    *)
+      echo "Unsupported distro: $ID"
+      exit 1
+      ;;
+  esac
+else
+  echo "Unsupported distro"
+  exit 1
+fi
+
 if [ "$INSTALL_RIPGREP" = "true" ]; then
   echo "Installing ripgrep $RIPGREP_VERSION"
 
