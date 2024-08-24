@@ -1,0 +1,15 @@
+{
+    "install_all_features": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "rust-cli-tools": {
+                "installRipgrep": true,
+                "installFd": true,
+                "installBat": true,
+                "installLsd": true,
+                "installSad": true,
+                "installDelta": true
+            }
+        }
+    }
+}

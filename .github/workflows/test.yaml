@@ -17,6 +17,7 @@ jobs:
           - neovim-src
           - sccache
           - gdb
+          - rust-cli-tools
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -40,6 +41,7 @@ jobs:
           - neovim-src
           - sccache
           - gdb
+          - rust-cli-tools
     steps:
       - uses: actions/checkout@v3
 
