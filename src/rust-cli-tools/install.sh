@@ -65,7 +65,6 @@ if [ "$INSTALL_RIPGREP" = "true" ]; then
 
   # Extract the `rg` binary and move it to /usr/local/bin
   tar -xzf /tmp/$ripgrep_filename --strip-components=1 \
-    -C /usr/local/bin \
-    ripgrep-${RIPGREP_VERSION}-${arch}-unknown-linux-gnu${filename_suffix}/rg
+    -C /usr/local/bin rg
   rm /tmp/$ripgrep_filename
 fi
