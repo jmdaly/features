@@ -98,3 +98,18 @@ if [ "$INSTALL_BAT" = "true" ]; then
     -C /usr/local/bin bat-v${BAT_VERSION}-${arch}-unknown-linux-gnu/bat
   rm /tmp/$bat_filename
 fi
+
+if [ "$INSTALL_LSD" = "true" ]; then
+  echo "Installing lsd $LSD_VERSION"
+
+  lsd_filename="lsd-v${LSD_VERSION}-${arch}-unknown-linux-gnu.tar.gz"
+  lsd_url="https://github.com/lsd-rs/lsd/releases/download/v${LSD_VERSION}/${lsd_filename}"
+
+  # Download the file with curl
+  curl -fsSL $lsd_url -o /tmp/$lsd_filename
+
+  # Extract the `lsd` binary and move it to /usr/local/bin
+  tar -xzf /tmp/$lsd_filename --strip-components=1 \
+    -C /usr/local/bin lsd-v${LSD_VERSION}-${arch}-unknown-linux-gnu/lsd
+  rm /tmp/$lsd_filename
+fi

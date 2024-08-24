@@ -43,6 +43,7 @@ source dev-container-features-test-lib
 check "report ripgrep version" rg --version
 check "report fd version" fd --version
 check "report bat version" bat --version
+check "report lsd version" lsd --version
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

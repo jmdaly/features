@@ -41,7 +41,7 @@
         },
         "lsdVersion": {
             "type": "string",
-            "default": "0.20.1",
+            "default": "1.1.5",
             "description": "The version of lsd to be installed"
         },
         "installSad": {
