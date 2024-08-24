@@ -51,13 +51,13 @@ fi
 if [ "$INSTALL_RIPGREP" = "true" ]; then
   echo "Installing ripgrep $RIPGREP_VERSION"
 
-  filename_suffix=""
-  # The x86_64 package has a '-musl' suffix to the filename
-  if [ "$arch" = "x86_64" ]; then
-    filename_suffix="-musl"
+  filename_suffix="musl"
+  # The aarch64 package has a '-gnu' suffix to the filename
+  if [ "$arch" = "aarch64" ]; then
+    filename_suffix="gnu"
   fi
 
-  ripgrep_filename="ripgrep-${RIPGREP_VERSION}-${arch}-unknown-linux${filename_suffix}.tar.gz"
+  ripgrep_filename="ripgrep-${RIPGREP_VERSION}-${arch}-unknown-linux-${filename_suffix}.tar.gz"
   ripgrep_url="https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VERSION}/${ripgrep_filename}"
 
   # Download the file with curl
@@ -65,6 +65,6 @@ if [ "$INSTALL_RIPGREP" = "true" ]; then
 
   # Extract the `rg` binary and move it to /usr/local/bin
   tar -xzf /tmp/$ripgrep_filename --strip-components=1 \
-    -C /usr/local/bin rg
+    -C /usr/local/bin ripgrep-${RIPGREP_VERSION}-${arch}-unknown-linux-${filename_suffix}/rg
   rm /tmp/$ripgrep_filename
 fi
