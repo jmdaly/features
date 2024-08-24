@@ -117,7 +117,7 @@ fi
 if [ "$INSTALL_SAD" = "true" ]; then
   echo "Installing sad $SAD_VERSION"
 
-  sad_filename="${arch}-unknown-linux-gnu.zip"
+  sad_filename="${arch}-unknown-linux-musl.zip"
   sad_url="https://github.com/ms-jpq/sad/releases/download/v${SAD_VERSION}/${sad_filename}"
 
   # Download the file with curl
