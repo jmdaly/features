@@ -6,6 +6,7 @@ set -e
 source dev-container-features-test-lib
 
 check "report ripgrep version" rg --version
+check "report fd version" fd --version
 
 # Report result
 reportResults

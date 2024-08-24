@@ -68,3 +68,18 @@ if [ "$INSTALL_RIPGREP" = "true" ]; then
     -C /usr/local/bin ripgrep-${RIPGREP_VERSION}-${arch}-unknown-linux-${filename_suffix}/rg
   rm /tmp/$ripgrep_filename
 fi
+
+if [ "$INSTALL_FD" = "true" ]; then
+  echo "Installing fd $FD_VERSION"
+
+  fd_filename="fd-v${FD_VERSION}-${arch}-unknown-linux-musl.tar.gz"
+  fd_url="https://github.com/sharkdp/fd/releases/download/v${FD_VERSION}/${fd_filename}"
+
+  # Download the file with curl
+  curl -fsSL $fd_url -o /tmp/$fd_filename
+
+  # Extract the `fd` binary and move it to /usr/local/bin
+  tar -xzf /tmp/$fd_filename --strip-components=1 \
+    -C /usr/local/bin fd-v${FD_VERSION}-${arch}-unknown-linux-musl/fd
+  rm /tmp/$fd_filename
+fi

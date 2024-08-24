@@ -21,7 +21,7 @@
         },
         "fdVersion": {
             "type": "string",
-            "default": "10.1.0",
+            "default": "10.2.0",
             "description": "The version of fd to be installed"
         },
         "installBat": {
