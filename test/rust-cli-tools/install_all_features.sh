@@ -10,6 +10,7 @@ check "report fd version" fd --version
 check "report bat version" bat --version
 check "report lsd version" lsd --version
 check "report sad version" sad --version
+check "report delta version" delta --version
 
 # Report result
 reportResults

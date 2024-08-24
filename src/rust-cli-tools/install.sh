@@ -127,3 +127,18 @@ if [ "$INSTALL_SAD" = "true" ]; then
   unzip -o /tmp/$sad_filename -d /usr/local/bin
   rm /tmp/$sad_filename
 fi
+
+if [ "$INSTALL_DELTA" = "true" ]; then
+  echo "Installing delta $DELTA_VERSION"
+
+  delta_filename="delta-${DELTA_VERSION}-${arch}-unknown-linux-gnu.tar.gz"
+  delta_url="https://github.com/dandavison/delta/releases/download/${DELTA_VERSION}/${delta_filename}"
+
+  # Download the file with curl
+  curl -fsSL $delta_url -o /tmp/$delta_filename
+
+  # Extract the `delta` binary and move it to /usr/local/bin
+  tar -xzf /tmp/$delta_filename --strip-components=1 \
+    -C /usr/local/bin delta-${DELTA_VERSION}-${arch}-unknown-linux-gnu/delta
+  rm /tmp/$delta_filename
+fi
