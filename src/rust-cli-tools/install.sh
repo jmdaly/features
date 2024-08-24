@@ -25,18 +25,18 @@ DELTA_VERSION=${DELTAVERSION}
 
 arch=$(uname -m)
 
-# Determine the Linux distro using /etc/os-release, and then install `curl` using the appropriate system package manager.
+# Install curl and unzip
 if [ -f /etc/os-release ]; then
   . /etc/os-release
   case $ID in
     debian|ubuntu)
-      apt-get update && apt-get install -y curl
+      apt-get update && apt-get install -y curl unzip
       ;;
     centos|rhel)
-      yum install -y curl
+      yum install -y curl unzip
       ;;
     fedora)
-      dnf install -y curl
+      dnf install -y curl unzip
       ;;
     *)
       echo "Unsupported distro: $ID"
