@@ -27,7 +27,6 @@ arch=$(uname -m)
 
 if [ "$INSTALL_RIPGREP" = "true" ]; then
   echo "Installing ripgrep $RIPGREP_VERSION"
-  cargo install ripgrep --version $RIPGREP_VERSION
 
   filename_suffix=""
   # The x86_64 package has a '-musl' suffix to the filename
