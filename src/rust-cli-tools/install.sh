@@ -83,3 +83,18 @@ if [ "$INSTALL_FD" = "true" ]; then
     -C /usr/local/bin fd-v${FD_VERSION}-${arch}-unknown-linux-musl/fd
   rm /tmp/$fd_filename
 fi
+
+if [ "$INSTALL_BAT" = "true" ]; then
+  echo "Installing bat $BAT_VERSION"
+
+  bat_filename="bat-v${BAT_VERSION}-${arch}-unknown-linux-gnu.tar.gz"
+  bat_url="https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/${bat_filename}"
+
+  # Download the file with curl
+  curl -fsSL $bat_url -o /tmp/$bat_filename
+
+  # Extract the `bat` binary and move it to /usr/local/bin
+  tar -xzf /tmp/$bat_filename --strip-components=1 \
+    -C /usr/local/bin bat-v${BAT_VERSION}-${arch}-unknown-linux-gnu/bat
+  rm /tmp/$bat_filename
+fi
