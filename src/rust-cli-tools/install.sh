@@ -113,3 +113,17 @@ if [ "$INSTALL_LSD" = "true" ]; then
     -C /usr/local/bin lsd-v${LSD_VERSION}-${arch}-unknown-linux-gnu/lsd
   rm /tmp/$lsd_filename
 fi
+
+if [ "$INSTALL_SAD" = "true" ]; then
+  echo "Installing sad $SAD_VERSION"
+
+  sad_filename="${arch}-unknown-linux-gnu.zip"
+  sad_url="https://github.com/ms-jpq/sad/releases/download/v${SAD_VERSION}/${sad_filename}"
+
+  # Download the file with curl
+  curl -fsSL $sad_url -o /tmp/$sad_filename
+
+  # Unzip the `sad` binary to /usr/local/bin
+  unzip -o /tmp/$sad_filename -d /usr/local/bin
+  rm /tmp/$sad_filename
+fi
