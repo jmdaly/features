@@ -1,0 +1,7 @@
+{
+    "name": "Host Docker Group",
+    "id": "host-docker-group",
+    "version": "1.0.0",
+    "description": "Ensures the container user has the correct permissions to use the docker socket.",
+    "options": {}
+}
