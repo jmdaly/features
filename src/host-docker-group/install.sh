@@ -17,15 +17,18 @@ tee /usr/local/share/docker-init.sh > /dev/null \
 #!/usr/bin/env bash
 set -e
 
-echo "Ensuring $username is in the $container_docker_group group"
-# Modify the newly created group to have the same GID as the host's docker group
-host_docker_group_gid=\$(stat -c %g /var/run/docker.sock)
+# Only execute the below code if the user exists
+if id -u $username &>/dev/null; then
+	echo "Ensuring $username is in the $container_docker_group group"
+	# Modify the newly created group to have the same GID as the host's docker group
+	host_docker_group_gid=\$(stat -c %g /var/run/docker.sock)
 
-# Modify the group ID. The -o flag allows the group ID to be changed even if the
-# GID is already in use.
-sudo groupmod -g \$host_docker_group_gid -o $container_docker_group
-# Add the user to the new group
-sudo usermod -aG $container_docker_group $username
+	# Modify the group ID. The -o flag allows the group ID to be changed even if the
+	# GID is already in use.
+	sudo groupmod -g \$host_docker_group_gid -o $container_docker_group
+	# Add the user to the new group.
+	sudo usermod -aG $container_docker_group $username
+fi
 
 # Execute whatever commands were passed in (if any). This allows us
 # to set this script to ENTRYPOINT while still executing the default CMD.
