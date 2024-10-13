@@ -3,5 +3,27 @@
     "id": "host-docker-group",
     "version": "1.0.0",
     "description": "Ensures the container user has the correct permissions to use the docker socket.",
-    "options": {}
+    "options": {
+        "containerUser": {
+            "type": "string",
+            "default": "user",
+            "description": "The user to add to the docker group. This user must exist in the container."
+        },
+        "containerDockerGroup": {
+            "type": "string",
+            "default": "host-docker",
+            "description": "The docker group in the container."
+        }
+    },
+    "mounts": [
+        {
+            "source": "/var/run/docker.sock",
+            "target": "/var/run/docker.sock",
+            "type": "bind"
+        }
+    ],
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/common-utils": {}
+    },
+    "entrypoint": "/usr/local/share/docker-init.sh"
 }
