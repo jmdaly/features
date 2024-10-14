@@ -1,0 +1,11 @@
+{
+    "stable": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "host-docker-group": {
+                "containerUser": "vscode",
+                "containerDockerGroup": "host-docker"
+            }
+        }
+    }
+}

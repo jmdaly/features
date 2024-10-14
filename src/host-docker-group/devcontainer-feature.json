@@ -1,0 +1,34 @@
+{
+    "name": "Host Docker Group",
+    "id": "host-docker-group",
+    "version": "1.0.0",
+    "description": "Ensures the container user has the correct permissions to use the docker socket. This is accomplished by adding the container user to a group with the same GID as the host docker group. This feature also mounts the docker socket into the container.",
+    "options": {
+        "containerUser": {
+            "type": "string",
+            "default": "vscode",
+            "description": "The user to add to the docker group. This user must exist in the container."
+        },
+        "containerDockerGroup": {
+            "type": "string",
+            "default": "host-docker",
+            "description": "The name to give the docker group in the container."
+        }
+    },
+    "mounts": [
+        {
+            "source": "/var/run/docker.sock",
+            "target": "/var/run/docker.sock",
+            "type": "bind"
+        }
+    ],
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/common-utils": {
+            "installZsh": false,
+            "installOhMyZsh": false,
+            "username": "none",
+            "upgradePackages": false
+        }
+    },
+    "entrypoint": "/usr/local/share/docker-init.sh"
+}
