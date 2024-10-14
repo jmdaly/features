@@ -6,7 +6,7 @@
     "options": {
         "containerUser": {
             "type": "string",
-            "default": "user",
+            "default": "vscode",
             "description": "The user to add to the docker group. This user must exist in the container."
         },
         "containerDockerGroup": {
