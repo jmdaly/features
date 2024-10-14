@@ -23,7 +23,12 @@
         }
     ],
     "dependsOn": {
-        "ghcr.io/devcontainers/features/common-utils": {}
+        "ghcr.io/devcontainers/features/common-utils": {
+            "installZsh": false,
+            "installOhMyZsh": false,
+            "username": "none",
+            "upgradePackages": false
+        }
     },
     "entrypoint": "/usr/local/share/docker-init.sh"
 }
