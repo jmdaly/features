@@ -1,13 +1,13 @@
 
-# sccache (sccache)
+# starship (starship)
 
-sccache is a compiler cache. It caches build artifacts for C, C++, and Rust, allowing for faster builds in subsequent runs.
+starship is a cross-shell prompt written in Rust
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/jmdaly/features/sccache:1": {}
+    "ghcr.io/jmdaly/features/starship:1": {}
 }
 ```
 
@@ -21,4 +21,4 @@ sccache is a compiler cache. It caches build artifacts for C, C++, and Rust, all
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/jmdaly/features/blob/main/src/sccache/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/jmdaly/features/blob/main/src/starship/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
