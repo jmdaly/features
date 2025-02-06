@@ -1,0 +1,10 @@
+{
+    "name": "starship",
+    "id": "starship",
+    "version": "1.0.0",
+    "description": "starship is a cross-shell prompt written in Rust",
+    "options": {},
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/rust": {}
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "bacon",
+    "id": "bacon",
+    "version": "1.0.0",
+    "description": "bacon is a background code checker written in Rust",
+    "options": {},
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/rust": {}
+    }
+}
