@@ -1,13 +1,13 @@
 
-# bacon (bacon)
+# jujutsu (jujutsu)
 
-bacon is a background code checker written in Rust
+jujutsu is a distributed version control system that supports git repositories.
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/jmdaly/features/bacon:1": {}
+    "ghcr.io/jmdaly/features/jujutsu:1": {}
 }
 ```
 
@@ -21,4 +21,4 @@ bacon is a background code checker written in Rust
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/jmdaly/features/blob/main/src/bacon/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/jmdaly/features/blob/main/src/jujutsu/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
