@@ -19,6 +19,9 @@ jobs:
           - gdb
           - rust-cli-tools
           - host-docker-group
+          - bacon
+          - starship
+          - jujutsu
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -44,6 +47,9 @@ jobs:
           - gdb
           - rust-cli-tools
           - host-docker-group
+          - bacon
+          - starship
+          - jujutsu
     steps:
       - uses: actions/checkout@v3
 

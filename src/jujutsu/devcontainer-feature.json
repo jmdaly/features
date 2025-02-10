@@ -1,0 +1,10 @@
+{
+    "name": "jujutsu",
+    "id": "jujutsu",
+    "version": "1.0.0",
+    "description": "jujutsu is a distributed version control system that supports git repositories.",
+    "options": {},
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/rust": {}
+    }
+}
