@@ -1,0 +1,10 @@
+{
+    "name": "difftastic",
+    "id": "difftastic",
+    "version": "1.0.0",
+    "description": "difftastic is a structural diff tool that understands syntax",
+    "options": {},
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/rust": {}
+    }
+}

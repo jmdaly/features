@@ -22,6 +22,7 @@ jobs:
           - bacon
           - starship
           - jujutsu
+          - difftastic
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -50,6 +51,7 @@ jobs:
           - bacon
           - starship
           - jujutsu
+          - difftastic
     steps:
       - uses: actions/checkout@v3
 
