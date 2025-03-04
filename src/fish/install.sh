@@ -8,7 +8,7 @@ echo "Activating feature 'fish'"
 install_fish_ubuntu() {
   echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
   apt-get update && apt-get install -y software-properties-common
-  apt-add-repository ppa:fish-shell/release-3 -y
+  apt-add-repository ppa:fish-shell/release-4 -y
   apt-get update
   apt-get install -y fish
 
@@ -22,10 +22,10 @@ install_fish_debian() {
 
   . /etc/os-release
 
-  echo "deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_${VERSION_ID}/ /" \
-    | tee /etc/apt/sources.list.d/shells:fish:release:3.list
-  curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_${VERSION_ID}/Release.key \
-    | gpg --dearmor | tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
+  echo "deb http://download.opensuse.org/repositories/shells:/fish:/release:/4/Debian_${VERSION_ID}/ /" \
+    | tee /etc/apt/sources.list.d/shells:fish:release:4.list
+  curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:4/Debian_${VERSION_ID}/Release.key \
+    | gpg --dearmor | tee /etc/apt/trusted.gpg.d/shells_fish_release_4.gpg > /dev/null
   apt-get update
   apt-get install -y fish
 }

@@ -1,7 +1,7 @@
 {
     "name": "fish shell",
     "id": "fish",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "fish is a smart and user-friendly command line shell for macOS, Linux, and the rest of the family. fish includes features like syntax highlighting, autosuggest-as-you-type, and fancy tab completions that just work, with no configuration required.",
     "options": {},
     "installsAfter": [
