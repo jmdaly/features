@@ -23,6 +23,7 @@ jobs:
           - starship
           - jujutsu
           - difftastic
+          - zellij
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -52,6 +53,7 @@ jobs:
           - starship
           - jujutsu
           - difftastic
+          - zellij
     steps:
       - uses: actions/checkout@v3
 
