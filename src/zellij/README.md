@@ -1,7 +1,7 @@
 
 # zellij (zellij)
 
-zellij is a structural diff tool that understands syntax
+zellij is a modern terminal multiplexer with batteries included
 
 ## Example Usage
 
