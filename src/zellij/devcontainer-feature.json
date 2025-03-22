@@ -1,0 +1,10 @@
+{
+    "name": "zellij",
+    "id": "zellij",
+    "version": "1.0.0",
+    "description": "zellij is a modern terminal multiplexer with batteries included",
+    "options": {},
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/rust": {}
+    }
+}
