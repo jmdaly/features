@@ -1,0 +1,18 @@
+{
+    "latest": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "neovim-bin": {
+                "nvimVersion": "latest"
+            }
+        }
+    },
+    "nightly": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "neovim-bin": {
+                "nvimVersion": "nightly"
+            }
+        }
+    }
+}

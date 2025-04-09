@@ -15,6 +15,7 @@ jobs:
         features:
           - fish
           - neovim-src
+          - neovim-bin
           - sccache
           - gdb
           - rust-cli-tools
@@ -45,6 +46,7 @@ jobs:
         features:
           - fish
           - neovim-src
+          - neovim-bin
           - sccache
           - gdb
           - rust-cli-tools
