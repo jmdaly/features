@@ -1,5 +1,5 @@
 
-# Neovim (neovim-src)
+# Neovim (neovim-bin)
 
 Neovim is a fork of Vim focused on modern code and features, rather than running in legacy environments.
 
@@ -7,7 +7,7 @@ Neovim is a fork of Vim focused on modern code and features, rather than running
 
 ```json
 "features": {
-    "ghcr.io/jmdaly/features/neovim-src:1": {}
+    "ghcr.io/jmdaly/features/neovim-bin:1": {}
 }
 ```
 
@@ -15,10 +15,10 @@ Neovim is a fork of Vim focused on modern code and features, rather than running
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | The version of Neovim to be installed (nightly or nightly) | string | nightly |
+| nvimVersion | The version of Neovim to be installed (latest or nightly) | string | latest |
 
 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/jmdaly/features/blob/main/src/neovim-src/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/jmdaly/features/blob/main/src/neovim-bin/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
