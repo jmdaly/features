@@ -1,0 +1,23 @@
+{
+    "name": "Homebrew Packages",
+    "id": "homebrew-packages",
+    "version": "1.0.0",
+    "description": "Install Homebrew packages by specifying a comma-separated list of package names.",
+    "documentationURL": "https://github.com/jj/features/tree/main/src/homebrew-packages",
+    "options": {
+        "packages": {
+            "type": "string",
+            "default": "",
+            "description": "Comma-separated list of Homebrew packages to install.",
+            "proposals": [
+                "jq",
+                "yq",
+                "gh",
+                "jq,yq,gh"
+            ]
+        }
+    },
+    "dependsOn": {
+        "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
+    }
+}

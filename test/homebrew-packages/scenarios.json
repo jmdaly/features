@@ -1,0 +1,18 @@
+{
+    "single_package": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "homebrew-packages": {
+                "packages": "jq"
+            }
+        }
+    },
+    "multiple_packages": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "homebrew-packages": {
+                "packages": "jq,yq"
+            }
+        }
+    }
+}
